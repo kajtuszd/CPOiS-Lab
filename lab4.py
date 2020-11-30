@@ -20,72 +20,72 @@ def add_noise(image, mult):
     return noisy
 
 
-# '''
-# low pass Gauss filter
-# '''
+'''
+low pass Gauss filter
+'''
 
-# radius = 7
+radius = 7
 
-# img = cv2.imread("ball.png")
+img = cv2.imread("ball.png")
 
-# img2 = add_noise(img,2)
-# img5 = add_noise(img,5)
-# img10 = add_noise(img,10)
-# img20 = add_noise(img,20)
-
-
-# img_gaussian2 = cv2.GaussianBlur(img2, (radius,radius), 0)
-# cv2.imshow("Img with noise 2", np.hstack((img2, img_gaussian2)))
-
-# img_gaussian5 = cv2.GaussianBlur(img5, (radius,radius), 0)
-# cv2.imshow("Img with noise 5", np.hstack((img5, img_gaussian5)))
-
-# img_gaussian10 = cv2.GaussianBlur(img10, (radius,radius), 0)
-# cv2.imshow("Img with noise 10", np.hstack((img10, img_gaussian10)))
-
-# img_gaussian20 = cv2.GaussianBlur(img20, (radius,radius), 0)
-# cv2.imshow("Img with noise 20", np.hstack((img20, img_gaussian20)))
-
-# cv2.waitKey()
-# cv2.destroyAllWindows
-
-# '''
-# low pass median filter
-# '''
-# # median
-
-# img = cv2.imread("marine.png")
-# cv2.imshow("Original", img)
-# noisy = add_noise(img, 10)
-# cv2.imshow("Original with noise added", noisy)
+img2 = add_noise(img,2)
+img5 = add_noise(img,5)
+img10 = add_noise(img,10)
+img20 = add_noise(img,20)
 
 
-# img_median = cv2.medianBlur(img, 5)
-# cv2.imshow("Img median", img_median)
+img_gaussian2 = cv2.GaussianBlur(img2, (radius,radius), 0)
+cv2.imshow("Img with noise 2", np.hstack((img2, img_gaussian2)))
 
-# img_median_noise = cv2.medianBlur(noisy, 5)
-# cv2.imshow("Img median with noise", img_median_noise)
+img_gaussian5 = cv2.GaussianBlur(img5, (radius,radius), 0)
+cv2.imshow("Img with noise 5", np.hstack((img5, img_gaussian5)))
 
-# cv2.waitKey(0)
-# cv2.destroyAllWindows
+img_gaussian10 = cv2.GaussianBlur(img10, (radius,radius), 0)
+cv2.imshow("Img with noise 10", np.hstack((img10, img_gaussian10)))
+
+img_gaussian20 = cv2.GaussianBlur(img20, (radius,radius), 0)
+cv2.imshow("Img with noise 20", np.hstack((img20, img_gaussian20)))
+
+cv2.waitKey()
+cv2.destroyAllWindows
+
+'''
+low pass median filter
+'''
+# median
+
+img = cv2.imread("marine.png")
+cv2.imshow("Original", img)
+noisy = add_noise(img, 10)
+cv2.imshow("Original with noise added", noisy)
 
 
-# # gaussian 
+img_median = cv2.medianBlur(img, 5)
+cv2.imshow("Img median", img_median)
 
-# img = cv2.imread("marine.png")
-# cv2.imshow("Original", img)
-# noisy = add_noise(img, 10)
-# cv2.imshow("Original with noise added", noisy)
+img_median_noise = cv2.medianBlur(noisy, 5)
+cv2.imshow("Img median with noise", img_median_noise)
+
+cv2.waitKey(0)
+cv2.destroyAllWindows
 
 
-# img_gaussian = cv2.GaussianBlur(img, (5,5), 0)
-# cv2.imshow("Img Gaussian", img_gaussian)
+# gaussian 
 
-# img_gaussian_noisy = cv2.GaussianBlur(noisy, (5,5), 0)
-# cv2.imshow("Img Gaussian with noise", img_gaussian_noisy)
+img = cv2.imread("marine.png")
+cv2.imshow("Original", img)
+noisy = add_noise(img, 10)
+cv2.imshow("Original with noise added", noisy)
 
-# cv2.waitKey(0)
-# cv2.destroyAllWindows
+
+img_gaussian = cv2.GaussianBlur(img, (5,5), 0)
+cv2.imshow("Img Gaussian", img_gaussian)
+
+img_gaussian_noisy = cv2.GaussianBlur(noisy, (5,5), 0)
+cv2.imshow("Img Gaussian with noise", img_gaussian_noisy)
+
+cv2.waitKey(0)
+cv2.destroyAllWindows
 
 
 '''
